@@ -55,6 +55,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
         #if os(tvOS)
             if let url = launchOptions?[.url] as? URL {
                 return self.application(.shared, open: url)
