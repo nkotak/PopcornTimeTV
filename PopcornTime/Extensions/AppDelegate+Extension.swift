@@ -96,6 +96,7 @@ extension AppDelegate: PCTPlayerViewControllerDelegate, UIViewControllerTransiti
             loadingViewController.backgroundImageView?.af_setImage(withURL: url)
         }
         loadingViewController.titleLabel.text = media.title
+        loadingViewController.modalPresentationStyle = .fullScreen
         
         self.activeRootViewController?.present(loadingViewController, animated: true)
         
@@ -150,6 +151,7 @@ extension AppDelegate: PCTPlayerViewControllerDelegate, UIViewControllerTransiti
                 
             let playViewController = storyboard.instantiateViewController(withIdentifier: "PCTPlayerViewController") as! PCTPlayerViewController
             playViewController.delegate = self
+            playViewController.modalPresentationStyle = .fullScreen
             media.play(fromFileOrMagnetLink: torrent.url, nextEpisodeInSeries: nextEpisode, loadingViewController: loadingViewController, playViewController: playViewController, progress: currentProgress, errorBlock: error, finishedLoadingBlock: finishedLoading, selectingTorrentBlock: media.title == "Unknown" ? selectTorrent : nil)
         }
     }
@@ -158,7 +160,7 @@ extension AppDelegate: PCTPlayerViewControllerDelegate, UIViewControllerTransiti
         switch button.downloadState {
         case .downloaded:
             
-//            AppDelegate.shared.play(Movie(download.mediaMetadata) ?? Episode(download.mediaMetadata)!, torrent: Torrent()) // No torrent metadata necessary, media is loaded from disk.
+            AppDelegate.shared.play(Movie(download.mediaMetadata) ?? Episode(download.mediaMetadata)!, torrent: Torrent()) // No torrent metadata necessary, media is loaded from disk.
             
             let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet, blurStyle: .dark)
 
