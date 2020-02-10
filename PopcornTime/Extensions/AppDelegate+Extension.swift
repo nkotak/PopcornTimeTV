@@ -114,7 +114,8 @@ extension AppDelegate: PCTPlayerViewControllerDelegate, UIViewControllerTransiti
             UIApplication.shared.isIdleTimerDisabled = false
             let flag = UIDevice.current.userInterfaceIdiom != .tv
             loadingVc.dismiss(animated: false) {
-              self.activeRootViewController?.present(playerVc, animated: true)
+//              self.activeRootViewController?.present(playerVc, animated: true)
+                self.present(playerVc, animated: true, completion: nil)
             }
 
             

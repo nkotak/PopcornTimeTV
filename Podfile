@@ -23,6 +23,7 @@ target 'PopcornTimeiOS' do
     pod 'OBSlider', '~> 1.1.1'
     pod '1PasswordExtension', '~> 1.8.4'
     pod 'MobileVLCKit', '~> 3.3.0'
+    pod "Player", "~> 0.13.2"
 end
 
 target 'PopcornTimetvOS' do
