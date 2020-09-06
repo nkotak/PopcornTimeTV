@@ -2,11 +2,9 @@
   <img src="http://i.imgur.com/76RElTT.png" alt="Popcorn Time" title="Popcorn Time">
 </p>
 
-# Popcorn Time for tvOS and iOS  (iOS 13 fixes & more!)
+# Popcorn Time for tvOS and iOS - Experimental
 
 ## Download
-
-Download the [latest .ipas](https://github.com/PopcornTimeTV/PopcornTimeTV/releases/latest).
 
 Alternatively you can [compile one yourself](https://github.com/PopcornTimeTV/PopcornTimeTV/wiki/Archiving-Popcorn-Time).
 
@@ -21,7 +19,7 @@ Then you can use [CocoaPods](http://cocoapods.org/) to install dependencies.
 Build instructions:
 
 ``` bash
-$ git clone https://github.com/PopcornTimeTV/PopcornTimeTV.git
+$ git clone https://github.com/nkotak/PopcornTimeTV.git
 $ cd PopcornTimeTV/
 $ bundle install
 $ bundle exec pod repo update
